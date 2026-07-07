@@ -20,6 +20,28 @@
   .btn:hover{background:var(--cyan)}
 
   .hero{padding:72px 0 40px;text-align:center}
+  .chip{position:relative;display:inline-block;margin-bottom:26px}
+  .chip button{display:inline-flex;align-items:center;gap:9px;background:rgba(31,155,255,.07);border:1px solid rgba(31,155,255,.45);
+    border-radius:999px;padding:9px 18px;color:var(--txt);font-family:'Space Grotesk',sans-serif;font-size:13.5px;font-weight:500;cursor:pointer}
+  .chip button:hover{border-color:var(--cyan)}
+  .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan)}
+  .chip .chev{font-size:10px;color:var(--dim);transition:transform .15s}
+  .chip.open .chev{transform:rotate(180deg)}
+  .clog{display:none;position:absolute;left:50%;transform:translateX(-50%);top:calc(100% + 12px);width:min(440px,88vw);
+    background:#101317;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 18px 8px;text-align:left;z-index:50;
+    box-shadow:0 30px 80px -20px rgba(0,0,0,.8);max-height:340px;overflow-y:auto}
+  .chip.open .clog{display:block}
+  .clog .ver{display:flex;gap:10px;align-items:baseline;margin:6px 0 10px}
+  .clog .ver b{font-size:14px}
+  .clog .ver span{font-family:'Space Mono',monospace;font-size:11px;color:var(--dim)}
+  .clog .item{display:flex;gap:10px;align-items:flex-start;margin:0 0 10px}
+  .clog .item p{font-size:12.5px;color:#b6bdc4;line-height:1.5;margin:0}
+  .badge{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.5px;padding:3px 7px;border-radius:5px;flex:none;margin-top:1px}
+  .b-new{background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.35)}
+  .b-imp{background:rgba(31,155,255,.14);color:#5eb8ff;border:1px solid rgba(31,155,255,.35)}
+  .b-fix{background:rgba(250,204,21,.12);color:#fbbf24;border:1px solid rgba(250,204,21,.3)}
+  .clog hr{border:0;border-top:1px solid rgba(255,255,255,.08);margin:12px 0}
+
   .kicker{font-family:'Space Mono',monospace;font-size:12px;color:var(--dim);letter-spacing:2px;text-transform:uppercase}
   h1{font-size:clamp(64px,14vw,170px);line-height:.92;letter-spacing:-.045em;font-weight:700;margin-top:18px;
      background:linear-gradient(115deg,#fff 35%,var(--blue) 75%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -79,6 +101,27 @@
   </nav>
 
   <header class="hero">
+    <div class="chip" id="chip">
+      <button type="button" onclick="document.getElementById('chip').classList.toggle('open')">
+        <span class="dot"></span>DeepTime v1.4.19<span class="chev">▼</span>
+      </button>
+      <div class="clog">
+        <div class="ver"><b>v1.4.19</b><span>Jun 30, 2026</span></div>
+        <div class="item"><span class="badge b-new">NEW</span><p>Edit any session's start &amp; end times in the Log — stats update everywhere.</p></div>
+        <div class="item"><span class="badge b-fix">FIXED</span><p>The floating pill stays strictly on your main display.</p></div>
+        <hr>
+        <div class="ver"><b>v1.4.18</b><span>Jun 24, 2026</span></div>
+        <div class="item"><span class="badge b-new">NEW</span><p>Drag the pill anywhere — corners snap flush, open space floats, spot remembered.</p></div>
+        <div class="item"><span class="badge b-new">NEW</span><p>Change a project's emoji right from the picker.</p></div>
+        <hr>
+        <div class="ver"><b>v1.4.17</b><span>Jun 22, 2026</span></div>
+        <div class="item"><span class="badge b-fix">FIXED</span><p>Starting a project from the picker takes a single click.</p></div>
+        <div class="item"><span class="badge b-imp">IMPROVED</span><p>A styled drag-to-Applications installer.</p></div>
+        <hr>
+        <div class="ver"><b>v1.4.16</b><span>Jun 13, 2026</span></div>
+        <div class="item"><span class="badge b-new">NEW</span><p>All-time project totals, ranked, at the bottom of the Dashboard.</p></div>
+      </div>
+    </div>
     <div class="kicker">A macOS app for intentional deep work</div>
     <h1>DEEPTIME</h1>
     <p class="thesis">Your dreams aren't separated from you by years.<br>They're separated by <b>deep time</b> — so count them.</p>
