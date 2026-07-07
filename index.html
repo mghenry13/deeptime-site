@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepTime — Budget your time like it matters</title>
+<meta name="description" content="DeepTime is a macOS app for intentional deep work: set an intention, stay focused, and understand where your time actually goes.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0c0e; --panel:#121517; --line:rgba(255,255,255,.08);
+    --txt:#e9ecef; --dim:#8b939c; --blue:#1f9bff; --cyan:#3ad2cf;
+    --green:#6b8470; --yellow:#8e876a; --red:#7c5e5e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);font-family:'Space Grotesk',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+  .mono{font-family:'Space Mono',monospace}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* Hero */
+  .hero{position:relative;text-align:center;padding:96px 0 72px;overflow:hidden}
+  .hero::before{content:'';position:absolute;top:-220px;left:50%;transform:translateX(-50%);
+    width:720px;height:520px;border-radius:50%;
+    background:radial-gradient(closest-side,rgba(0,142,255,.20),transparent 70%);pointer-events:none}
+  .icon{width:96px;height:96px;border-radius:24px;box-shadow:0 12px 44px rgba(0,142,255,.25)}
+  h1{font-size:clamp(30px,5.4vw,50px);font-weight:700;line-height:1.15;letter-spacing:-.5px;margin:28px auto 0;max-width:760px}
+  h1 em{font-style:normal;color:var(--blue)}
+  .sub{color:var(--dim);font-size:clamp(15px,2.4vw,18px);max-width:600px;margin:18px auto 0}
+  .cta{display:inline-flex;align-items:center;gap:10px;margin-top:36px;background:var(--blue);color:#fff;
+    font-weight:700;font-size:17px;padding:15px 34px;border-radius:14px;transition:transform .12s ease, box-shadow .12s ease;
+    box-shadow:0 8px 30px rgba(0,142,255,.35)}
+  .cta:hover{transform:translateY(-1px);box-shadow:0 12px 40px rgba(0,142,255,.45);text-decoration:none}
+  .meta{margin-top:14px;font-size:12.5px;color:var(--dim)}
+
+  /* Section basics */
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  h2{font-size:24px;font-weight:700;margin-bottom:8px}
+  .lead{color:var(--dim);max-width:640px}
+
+  /* Thesis */
+  .thesis{font-size:clamp(20px,3.2vw,28px);font-weight:500;line-height:1.45;max-width:760px;margin:0 auto;text-align:center}
+  .thesis b{color:var(--cyan);font-weight:700}
+
+  /* Tenets */
+  .tenets{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:32px}
+  .tenet{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px 22px}
+  .tenet .n{font-family:'Space Mono',monospace;font-size:12px;color:var(--blue)}
+  .tenet h3{font-size:17px;margin:10px 0 8px}
+  .tenet p{font-size:13.5px;color:var(--dim)}
+
+  /* How it works visuals */
+  .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:32px}
+  .shot{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:14px}
+  .shot h4{font-size:14.5px}
+  .shot p{font-size:12.5px;color:var(--dim)}
+  .stage{background:#0d0f11;border:1px solid var(--line);border-radius:10px;height:150px;position:relative;overflow:hidden;flex:none}
+
+  /* picker mock */
+  .modal{position:absolute;inset:18px 22px;background:#15181b;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 14px}
+  .modal .q{font-size:10px;color:var(--dim);text-align:center;margin-bottom:8px}
+  .prow{display:flex;align-items:center;gap:6px;font-size:10px;padding:5px 8px;border-radius:6px;margin-bottom:5px}
+  .pdot{width:6px;height:6px;border-radius:50%}
+
+  /* pill mock */
+  .deskline{position:absolute;top:0;left:0;right:0;height:10px;background:rgba(255,255,255,.05)}
+  .cpill{position:absolute;right:0;bottom:0;display:flex;align-items:center;gap:7px;background:var(--cyan);
+    border-radius:12px 0 0 0;padding:9px 14px;color:#063b37;font-size:12px;font-weight:700}
+  .cpill .t{font-family:'Space Mono',monospace;font-weight:400}
+  .cpill .d{width:8px;height:8px;border-radius:50%;background:#063b37}
+
+  /* heatmap mock */
+  .hm{position:absolute;inset:16px 20px;display:grid;grid-template-columns:repeat(7,1fr);gap:5px;align-content:center}
+  .hm span{display:block;aspect-ratio:1.4;border-radius:4px;background:rgba(255,255,255,.06)}
+
+  /* Feature list */
+  .feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px 28px;margin-top:26px}
+  .feat{display:flex;gap:10px;font-size:13.5px;color:var(--dim);align-items:baseline}
+  .feat::before{content:'~';color:var(--blue);font-family:'Space Mono',monospace;font-weight:700}
+  .feat b{color:var(--txt);font-weight:500}
+
+  /* Bottom CTA + footer */
+  .bottom{text-align:center}
+  footer{border-top:1px solid var(--line);padding:36px 0 48px;text-align:center;font-size:13px;color:var(--dim)}
+  footer .links{margin-top:8px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="icon" src="assets/icon-256.png" alt="DeepTime app icon" width="96" height="96">
+    <h1>Your dreams aren't years away.<br>They're <em>deep&nbsp;hours</em> away.</h1>
+    <p class="sub">DeepTime is a macOS app for intentional deep work — set an intention every time you sit down, stay focused while you're in it, and see exactly where your time goes.</p>
+    <a class="cta" href="https://github.com/mghenry13/deeptime-updates/releases/download/feed/DeepTime.dmg">⤓&nbsp; Download for Free</a>
+    <div class="meta mono">macOS 13+ · Apple silicon &amp; Intel · Signed &amp; notarized · Auto-updates</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="thesis">We budget money. We track meals and workouts. But <b>time</b> — the only resource you can't get back — mostly slips by unexamined. DeepTime treats your hours like they're worth something. Because they are.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Three tenets</h2>
+    <p class="lead">Everything in the app serves one of these.</p>
+    <div class="tenets">
+      <div class="tenet"><span class="n mono">01</span><h3>Set intention</h3>
+        <p>Every time you open your Mac, DeepTime asks one question: what deserves your focus? Pick a project — or honestly claim FreeTime — before the scroll picks for you.</p></div>
+      <div class="tenet"><span class="n mono">02</span><h3>Stay focused</h3>
+        <p>A quiet, project-colored timer lives at the edge of your screen the whole session. Not a nag — a presence. You always know what you committed to.</p></div>
+      <div class="tenet"><span class="n mono">03</span><h3>Understand your time</h3>
+        <p>Daily and weekly goals, pace bars, a monthly heat map, streaks, and all-time totals per project. Your real hours, honestly counted — sleep and idle never inflate the numbers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How it works</h2>
+    <div class="how">
+      <div class="shot">
+        <div class="stage">
+          <div class="modal">
+            <div class="q">What deserves your focus?</div>
+            <div class="prow" style="background:rgba(58,210,207,.12)"><span class="pdot" style="background:#3ad2cf"></span>GenAI Agency</div>
+            <div class="prow" style="background:rgba(51,255,102,.10)"><span class="pdot" style="background:#33ff66"></span>DeepTime</div>
+            <div class="prow" style="background:rgba(255,140,51,.10)"><span class="pdot" style="background:#ff8c33"></span>Dome</div>
+          </div>
+        </div>
+        <h4>Commit before you start</h4>
+        <p>The picker appears on wake and unlock. Choose a project, start a timed block, or take deliberate FreeTime.</p>
+      </div>
+      <div class="shot">
+        <div class="stage">
+          <div class="deskline"></div>
+          <div class="cpill"><span class="d"></span>GenAI Agency <span class="t">▲ 24:47</span></div>
+        </div>
+        <h4>Carry your intention</h4>
+        <p>The pill sits in the corner in your project's color, counting up — or down for timed blocks. Drag it anywhere.</p>
+      </div>
+      <div class="shot">
+        <div class="stage"><div class="hm" id="hm"></div></div>
+        <h4>See the month add up</h4>
+        <p>Goal-colored days, weekly pace, streaks, and ranked all-time project totals in the Dashboard.</p>
+      </div>
+    </div>
+    <div class="feats">
+      <div class="feat"><span><b>Honest accounting</b> — sleep, lock, and idle time never count.</span></div>
+      <div class="feat"><span><b>Meeting-aware</b> — calls and presentations don't cut your session.</span></div>
+      <div class="feat"><span><b>Daily &amp; weekly goals</b> with live pace in your menu bar.</span></div>
+      <div class="feat"><span><b>Local-first &amp; private</b> — your data lives on your Mac, in SQLite you can back up or export to CSV.</span></div>
+      <div class="feat"><span><b>Connects to your AI</b> — a built-in MCP server lets Claude or Cursor read your time (read-only).</span></div>
+      <div class="feat"><span><b>Editable log</b> — fix a session's project or times anytime.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="bottom">
+  <div class="wrap">
+    <h2>Start counting the hours that count.</h2>
+    <a class="cta" href="https://github.com/mghenry13/deeptime-updates/releases/download/feed/DeepTime.dmg">⤓&nbsp; Download for Free</a>
+    <div class="meta mono">Free while in beta · macOS 13+</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Created by <b>Michael Henry</b></div>
+    <div class="links">
+      <a href="https://michaelhenry.studio/" target="_blank" rel="noopener">michaelhenry.studio</a>
+      <a href="https://www.linkedin.com/in/michaelhenryio/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/michaelhenryio/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Heat-map mock: goal-colored month like the app (green ≥ goal, yellow, red, empty).
+  const hm = document.getElementById('hm');
+  const colors = ['#6b8470','#8e876a','#7c5e5e','rgba(255,255,255,.06)'];
+  const weights = [0.38, 0.24, 0.18, 0.20];
+  for (let i = 0; i < 28; i++) {
+    const s = document.createElement('span');
+    let r = Math.random(), acc = 0, c = colors[3];
+    for (let j = 0; j < 4; j++) { acc += weights[j]; if (r <= acc) { c = colors[j]; break; } }
+    s.style.background = c;
+    hm.appendChild(s);
+  }
+</script>
+</body>
+</html>
