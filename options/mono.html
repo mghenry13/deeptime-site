@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepTime — deep work, honestly counted</title>
+<link rel="icon" href="../assets/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#070809;--line:rgba(255,255,255,.09);--txt:#d7dde2;--dim:#5b6470;--cyan:#3ad2cf;--blue:#1f9bff}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font-family:'Space Mono',monospace;-webkit-font-smoothing:antialiased;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:64px 64px;background-position:center top}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+
+  nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-size:13px}
+  nav .brand{display:flex;gap:10px;align-items:center;font-weight:700}
+  nav img{width:24px;height:24px;border-radius:6px}
+  .btn{border:1px solid var(--cyan);color:var(--cyan);padding:9px 18px;border-radius:8px;font-size:13px;background:rgba(58,210,207,.06)}
+  .btn:hover{background:rgba(58,210,207,.14)}
+  .btn.solid{background:var(--cyan);color:#04211f;font-weight:700}
+
+  .hero{padding:80px 0 56px}
+  .prompt{color:var(--dim);font-size:13px}
+  h1{font-size:clamp(26px,4.6vw,42px);line-height:1.25;font-weight:700;margin:16px 0 0;letter-spacing:-1px}
+  h1 .c{color:var(--cyan)}
+  h1 .cursor{display:inline-block;width:.55em;height:1.05em;background:var(--cyan);vertical-align:-.12em;
+    animation:blink 1.1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  .sub{color:var(--dim);font-size:14px;margin-top:18px;max-width:540px;line-height:1.7}
+  .hero .btn{margin-top:30px;display:inline-block}
+  .meta{margin-top:12px;font-size:11.5px;color:var(--dim)}
+
+  .term{background:#0c0e10;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:18px}
+  .tbar{display:flex;gap:6px;padding:11px 14px;border-bottom:1px solid var(--line)}
+  .tbar i{width:10px;height:10px;border-radius:50%;background:#22262b;display:block}
+  .term img{display:block;width:100%}
+
+  .flags{padding:56px 0 8px}
+  .flags h2{font-size:15px;color:var(--dim);font-weight:400}
+  .flaglist{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:16px;font-size:14px}
+  .flaglist span{color:var(--txt)}
+  .flaglist b{color:var(--cyan);font-weight:400}
+
+  .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;padding:40px 0 8px}
+  .cell h3{font-size:14px;color:var(--cyan);font-weight:700}
+  .cell h3::before{content:'» ';color:var(--dim)}
+  .cell p{font-size:12.5px;color:var(--dim);line-height:1.7;margin-top:6px}
+  .cell .term{margin-top:14px}
+  .cell .term .imgbox{max-height:300px;overflow:hidden;display:flex;justify-content:center;padding:14px 14px 0;background:#0d0f11}
+  .cell .term .imgbox img{width:82%;max-width:280px;border-radius:8px 8px 0 0}
+  .cell .term .imgbox.pill{justify-content:flex-end;align-items:center;padding:30px 0 30px 30px}
+  .cell .term .imgbox.pill img{border-radius:10px 0 0 0;width:76%}
+
+  .bottom{padding:64px 0;text-align:center}
+  .bottom .line{color:var(--dim);font-size:13px;margin-bottom:20px}
+  footer{border-top:1px solid var(--line);padding:26px 0 44px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+    font-size:12px;color:var(--dim)}
+  footer .links{display:flex;gap:16px}
+  footer a:hover{color:var(--cyan)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <span class="brand"><img src="../assets/icon-256.png" alt="">deeptime</span>
+    <a class="btn" href="https://github.com/mghenry13/deeptime-updates/releases/download/feed/DeepTime.dmg">⤓ download</a>
+  </nav>
+
+  <header class="hero">
+    <div class="prompt">$ deeptime start</div>
+    <h1>Your dreams aren't years away.<br>They're <span class="c">deep hours</span> away.<span class="cursor"></span></h1>
+    <p class="sub">// DeepTime is a macOS app for intentional deep work. It asks what deserves your focus before you start, keeps the commitment on screen, and counts only the hours that are real.</p>
+    <a class="btn solid" href="https://github.com/mghenry13/deeptime-updates/releases/download/feed/DeepTime.dmg">⤓ download for free</a>
+    <div class="meta">macOS 13+ · signed &amp; notarized · auto-updates · free</div>
+  </header>
+
+  <div class="term">
+    <div class="tbar"><i></i><i></i><i></i></div>
+    <img src="../assets/shots/overlay.png" alt="DeepTime's full-screen focus picker asking: what deserves your focus?">
+  </div>
+
+  <section class="flags">
+    <h2>// features</h2>
+    <div class="flaglist">
+      <span><b>--intention</b></span>
+      <span><b>--focus</b></span>
+      <span><b>--goals</b></span>
+      <span><b>--streaks</b></span>
+      <span><b>--heatmap</b></span>
+      <span><b>--log</b></span>
+      <span><b>--private</b></span>
+      <span><b>--mcp</b></span>
+    </div>
+  </section>
+
+  <section class="row">
+    <div class="cell">
+      <h3>menubar</h3>
+      <p>Daily goal pace, today's projects, and the week — one click away.</p>
+      <div class="term"><div class="imgbox"><img src="../assets/shots/popover.png" alt="Menu-bar popover with goal and today's breakdown"></div></div>
+    </div>
+    <div class="cell">
+      <h3>pill</h3>
+      <p>A project-colored timer holds the corner of your screen, counting.</p>
+      <div class="term"><div class="imgbox pill"><img src="../assets/shots/pill.png" alt="Corner pill: Startup, 1:25:08 and counting"></div></div>
+    </div>
+    <div class="cell">
+      <h3>dashboard</h3>
+      <p>Heat map, streaks, all-time totals. Sleep and idle never count.</p>
+      <div class="term"><div class="imgbox"><img src="../assets/shots/dashboard.png" alt="Dashboard: weekly goal, heat map, streak, totals"></div></div>
+    </div>
+  </section>
+
+  <section class="bottom">
+    <div class="line">// we budget money, meals, and workouts. time is the one we can't get back.</div>
+    <a class="btn solid" href="https://github.com/mghenry13/deeptime-updates/releases/download/feed/DeepTime.dmg">⤓ download for free</a>
+  </section>
+
+  <footer>
+    <span>created by <a href="https://michaelhenry.studio/" target="_blank" rel="noopener"><b>michael henry</b></a></span>
+    <span class="links">
+      <a href="https://michaelhenry.studio/" target="_blank" rel="noopener">studio</a>
+      <a href="https://www.linkedin.com/in/michaelhenryio/" target="_blank" rel="noopener">linkedin</a>
+      <a href="https://www.instagram.com/michaelhenryio/" target="_blank" rel="noopener">instagram</a>
+    </span>
+  </footer>
+</div>
+</body>
+</html>

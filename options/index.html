@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepTime — landing page directions</title>
+<link rel="icon" href="../assets/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0c0e;color:#e9ecef;font-family:'Space Grotesk',sans-serif;padding:56px 24px}
+  .wrap{max-width:960px;margin:0 auto}
+  h1{font-size:28px} p.lead{color:#8b939c;margin:8px 0 32px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:20px}
+  a.card{display:block;background:#121517;border:1px solid rgba(255,255,255,.09);border-radius:16px;
+    overflow:hidden;color:inherit;text-decoration:none;transition:transform .12s ease,border-color .12s ease}
+  a.card:hover{transform:translateY(-2px);border-color:rgba(31,155,255,.5)}
+  .prev{height:210px;border-bottom:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden}
+  .meta{padding:16px 18px}
+  .meta h2{font-size:17px} .meta p{font-size:13px;color:#8b939c;margin-top:4px}
+  .tag{font-family:'Space Mono',monospace;font-size:10.5px;color:#1f9bff}
+  /* mini previews */
+  .p-bento{background:#0c0e10;padding:16px;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:10px}
+  .p-bento div{background:#15181c;border:1px solid rgba(255,255,255,.07);border-radius:12px}
+  .p-bento div:first-child{grid-row:span 2;background:linear-gradient(160deg,#15181c,#0f1c26)}
+  .p-cal{background:#fafafa;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+  .p-cal .h{width:52%;height:14px;border-radius:4px;background:#111}
+  .p-cal .s{width:38%;height:8px;border-radius:4px;background:#c9ccd1}
+  .p-cal .b{width:120px;height:30px;border-radius:8px;background:#111}
+  .p-mono{background:#070809;display:flex;flex-direction:column;justify-content:center;padding:22px;gap:8px;font-family:'Space Mono',monospace;font-size:11px;color:#3ad2cf}
+  .p-mono span{color:#5b6470}
+  .p-poster{background:#0a0c0e;display:flex;align-items:center;justify-content:center}
+  .p-poster b{font-size:44px;line-height:1;letter-spacing:-2px;background:linear-gradient(100deg,#fff 30%,#1f9bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>DeepTime — four landing directions</h1>
+  <p class="lead">Same concise copy + one-word features in four styles. Click any to view the full page.</p>
+  <div class="grid">
+    <a class="card" href="bento.html">
+      <div class="prev p-bento"><div></div><div></div><div></div></div>
+      <div class="meta"><span class="tag">A</span><h2>Bento</h2><p>Resonant-inspired: generous spacing, a grid of visual cards, each feature is a tile.</p></div>
+    </a>
+    <a class="card" href="cal.html">
+      <div class="prev p-cal"><div class="h"></div><div class="s"></div><div class="b"></div></div>
+      <div class="meta"><span class="tag">B</span><h2>Cal.com</h2><p>Light, crisp, borders-and-badges SaaS minimalism. Black-on-white with one accent.</p></div>
+    </a>
+    <a class="card" href="mono.html">
+      <div class="prev p-mono">$ deeptime start<br><span>› what deserves your focus?</span><br>▲ 1:25:08 — Startup</div>
+      <div class="meta"><span class="tag">C</span><h2>Terminal</h2><p>Mono-spaced, dev-tool energy. Grid lines, prompt cursor, features as flags.</p></div>
+    </a>
+    <a class="card" href="poster.html">
+      <div class="prev p-poster"><b>DEEP<br>TIME</b></div>
+      <div class="meta"><span class="tag">D</span><h2>Poster</h2><p>Typographic manifesto: giant type, numbered tenets, neon gradient moments.</p></div>
+    </a>
+  </div>
+</div>
+</body>
+</html>

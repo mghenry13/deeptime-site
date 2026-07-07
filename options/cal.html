@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepTime — The deep work timer for macOS</title>
+<link rel="icon" href="../assets/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#fafafa;--ink:#111827;--dim:#6b7280;--line:#e5e7eb;--card:#fff;--accent:#008EFF}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+  .mono{font-family:'Space Mono',monospace}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 24px}
+
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+  nav .brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:15px}
+  nav img{width:26px;height:26px;border-radius:6px}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:#111827;color:#fff;font-weight:600;
+    padding:10px 20px;border-radius:10px;font-size:14px;border:1px solid #111827}
+  .btn:hover{background:#000}
+  .btn.big{padding:14px 30px;font-size:16px}
+
+  .hero{text-align:center;padding:76px 0 56px}
+  .badge{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:#fff;border-radius:999px;
+    padding:6px 14px;font-size:12.5px;color:var(--dim);font-weight:500}
+  .badge .dot{width:7px;height:7px;border-radius:50%;background:#22c55e}
+  h1{font-size:clamp(34px,5.4vw,56px);letter-spacing:-1.8px;line-height:1.06;font-weight:700;margin-top:22px}
+  .sub{color:var(--dim);font-size:17px;max-width:520px;margin:18px auto 0;line-height:1.6}
+  .hero .btn{margin-top:30px}
+  .meta{margin-top:12px;font-size:12px;color:var(--dim)}
+
+  .frame{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    box-shadow:0 24px 60px -30px rgba(17,24,39,.25)}
+  .frame img{display:block;width:100%}
+
+  section{padding:64px 0}
+  h2{font-size:26px;letter-spacing:-.8px;text-align:center}
+  .lead{color:var(--dim);text-align:center;margin-top:8px}
+
+  .words{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+  .words span{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:500}
+  .words svg{width:13px;height:13px;vertical-align:-2px;margin-right:6px;stroke:var(--accent)}
+
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:36px}
+  .col{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .col .shot{background:#0d0f11;display:flex;justify-content:center;padding:20px 20px 0;max-height:330px;overflow:hidden}
+  .col .shot img{width:78%;max-width:300px;display:block;border-radius:10px 10px 0 0}
+  .col .shot.pillshot{align-items:center;justify-content:flex-end;padding:34px 0 34px 34px;max-height:none}
+  .col .shot.pillshot img{width:72%;border-radius:12px 0 0 0}
+  .col .cap{padding:18px 20px}
+  .col h3{font-size:15.5px;font-weight:600}
+  .col p{font-size:13.5px;color:var(--dim);margin-top:5px;line-height:1.6}
+
+  .bottom{text-align:center;border-top:1px solid var(--line)}
+  footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+    font-size:13px;color:var(--dim)}
+  footer .links{display:flex;gap:18px}
+  footer a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <span class="brand"><img src="../assets/icon-256.png" alt="">DeepTime</span>
+    <a class="btn" href="https://github.com/mghenry13/deeptime-updates/releases/download/feed/DeepTime.dmg">Download</a>
+  </nav>
+
+  <header class="hero">
+    <span class="badge"><span class="dot"></span>Free for macOS</span>
+    <h1>The deep work timer<br>that asks first.</h1>
+    <p class="sub">Your dreams aren't years away — they're deep hours away. DeepTime makes every session start with an intention, and every hour count honestly.</p>
+    <a class="btn big" href="https://github.com/mghenry13/deeptime-updates/releases/download/feed/DeepTime.dmg">⤓ Download for Free</a>
+    <div class="meta mono">macOS 13+ · signed &amp; notarized · auto-updates</div>
+  </header>
+
+  <div class="frame">
+    <img src="../assets/shots/overlay.png" alt="DeepTime's full-screen focus picker asking: what deserves your focus?">
+  </div>
+
+  <section>
+    <h2>Set intention. Stay focused. Understand your time.</h2>
+    <p class="lead">We budget money, meals, and workouts. DeepTime budgets the one thing you can't get back.</p>
+    <div class="words">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>Intention</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg>Focus</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Goals</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M12 2c1 5 6 6 6 11a6 6 0 0 1-12 0c0-5 5-6 6-11z"/></svg>Streaks</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Heatmaps</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Private</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>MCP</span>
+    </div>
+
+    <div class="cols">
+      <div class="col">
+        <div class="shot"><img src="../assets/shots/popover.png" alt="Menu-bar popover: daily goal, today's projects, the week"></div>
+        <div class="cap"><h3>Today, one click away</h3><p>Goal pace, per-project breakdown, and your week — live in the menu bar.</p></div>
+      </div>
+      <div class="col">
+        <div class="shot pillshot"><img src="../assets/shots/pill.png" alt="Corner pill showing a live Startup session at 1:25:08"></div>
+        <div class="cap"><h3>Your intention, always visible</h3><p>A project-colored pill holds the corner of your screen. Not a nag — a presence.</p></div>
+      </div>
+      <div class="col">
+        <div class="shot"><img src="../assets/shots/dashboard.png" alt="Dashboard: weekly goal, July heat map, 4-day streak, all-time totals"></div>
+        <div class="cap"><h3>The month, honestly counted</h3><p>Heat map, streaks, ranked totals. Sleep and idle never inflate the numbers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bottom">
+    <h2>Start counting the hours that count.</h2>
+    <a class="btn big" style="margin-top:26px" href="https://github.com/mghenry13/deeptime-updates/releases/download/feed/DeepTime.dmg">⤓ Download for Free</a>
+    <div class="meta mono">Free while in beta</div>
+  </section>
+
+  <footer>
+    <span>Created by <a href="https://michaelhenry.studio/" target="_blank" rel="noopener"><b>Michael Henry</b></a></span>
+    <span class="links">
+      <a href="https://michaelhenry.studio/" target="_blank" rel="noopener">Studio</a>
+      <a href="https://www.linkedin.com/in/michaelhenryio/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/michaelhenryio/" target="_blank" rel="noopener">Instagram</a>
+    </span>
+  </footer>
+</div>
+</body>
+</html>
