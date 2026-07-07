@@ -67,10 +67,38 @@
   @media(max-width:700px){.mgrid{grid-template-columns:1fr}}
   .bottom{padding:64px 0;text-align:center}
   .bottom .line{color:var(--dim);font-size:13px;margin-bottom:20px}
-  footer{border-top:1px solid var(--line);padding:26px 0 44px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
-    font-size:12px;color:var(--dim)}
-  footer .links{display:flex;gap:16px}
-  footer a:hover{color:var(--cyan)}
+  footer{padding:44px 0 54px;text-align:center;font-size:13px;color:var(--dim)}
+  footer .fq{font-size:clamp(15px,2.2vw,19px);color:var(--txt);font-weight:500;line-height:1.55;max-width:620px;margin:0 auto;
+    min-height:3em;transition:opacity .6s ease}
+  footer .fq.fade{opacity:0}
+  footer .fa{font-family:'Space Mono',monospace;font-size:11.5px;color:var(--dim);margin-top:10px;transition:opacity .6s ease}
+  footer .fa.fade{opacity:0}
+  footer .credit{margin-top:28px;font-size:12px}
+  footer .credit a{color:var(--cyan)}
+  .hcap{font-size:clamp(14px,2.2vw,18px);color:var(--txt);margin-top:18px}
+  .hcap b{color:var(--cyan)}
+  .chip{position:relative;display:inline-block;margin-bottom:24px}
+  .chip button{display:inline-flex;align-items:center;gap:9px;background:rgba(58,210,207,.06);border:1px solid rgba(58,210,207,.5);
+    border-radius:8px;padding:9px 18px;color:var(--txt);font-family:'Space Mono',monospace;font-size:13px;font-weight:500;cursor:pointer}
+  .chip .dot{width:7px;height:7px;border-radius:50%;background:#00d0cc}
+  .chip .chev{font-size:10px;opacity:.6;transition:transform .15s}
+  .chip.open .chev{transform:rotate(180deg)}
+  .clog{display:none;position:absolute;left:50%;transform:translateX(-50%);top:calc(100% + 12px);width:min(440px,88vw);
+    background:#0c0e10;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 18px 8px;text-align:left;z-index:50;
+    box-shadow:0 30px 80px -20px rgba(0,0,0,.45);max-height:340px;overflow-y:auto}
+  .chip.open .clog{display:block}
+  .clog .ver{display:flex;gap:10px;align-items:baseline;margin:6px 0 10px}
+  .clog .ver b{font-size:14px;color:var(--txt)}
+  .clog .ver span{font-family:'Space Mono',monospace;font-size:11px;color:var(--dim)}
+  .clog .item{display:flex;gap:10px;align-items:flex-start;margin:0 0 10px}
+  .clog .item p{font-size:12.5px;color:var(--dim);line-height:1.5;margin:0}
+  .badge{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.5px;padding:3px 7px;border-radius:5px;flex:none;margin-top:1px}
+  .b-new{background:rgba(34,197,94,.15);color:#16a34a;border:1px solid rgba(34,197,94,.35)}
+  .b-imp{background:rgba(31,155,255,.14);color:#2b8fe0;border:1px solid rgba(31,155,255,.35)}
+  .b-fix{background:rgba(217,164,6,.14);color:#b45309;border:1px solid rgba(217,164,6,.3)}
+  .clog hr{border:0;border-top:1px solid rgba(255,255,255,.12);margin:12px 0}
+  @media(max-width:700px){.heroimg{aspect-ratio:1/1.05;object-fit:cover;object-position:48% 42%;width:100%}}
+
 </style>
 </head>
 <body>
@@ -81,8 +109,29 @@
   </nav>
 
   <header class="hero">
+    <div class="chip" id="chip">
+      <button type="button" onclick="document.getElementById('chip').classList.toggle('open')">
+        <span class="dot"></span>DeepTime v1.4.19<span class="chev">▼</span>
+      </button>
+      <div class="clog">
+        <div class="ver"><b>v1.4.19</b><span>Jun 30, 2026</span></div>
+        <div class="item"><span class="badge b-new">NEW</span><p>Edit any session's start &amp; end times in the Log — stats update everywhere.</p></div>
+        <div class="item"><span class="badge b-fix">FIXED</span><p>The floating pill stays strictly on your main display.</p></div>
+        <hr>
+        <div class="ver"><b>v1.4.18</b><span>Jun 24, 2026</span></div>
+        <div class="item"><span class="badge b-new">NEW</span><p>Drag the pill anywhere — corners snap flush, open space floats, spot remembered.</p></div>
+        <div class="item"><span class="badge b-new">NEW</span><p>Change a project's emoji right from the picker.</p></div>
+        <hr>
+        <div class="ver"><b>v1.4.17</b><span>Jun 22, 2026</span></div>
+        <div class="item"><span class="badge b-fix">FIXED</span><p>Starting a project from the picker takes a single click.</p></div>
+        <div class="item"><span class="badge b-imp">IMPROVED</span><p>A styled drag-to-Applications installer.</p></div>
+        <hr>
+        <div class="ver"><b>v1.4.16</b><span>Jun 13, 2026</span></div>
+        <div class="item"><span class="badge b-new">NEW</span><p>All-time project totals, ranked, at the bottom of the Dashboard.</p></div>
+      </div>
+    </div>
     <div class="prompt">$ deeptime start</div>
-    <h1>Your dreams aren't years away.<br>They're <span class="c">deep hours</span> away.<span class="cursor"></span></h1>
+    <h1>Your dreams aren't years away.<br>They're <span class="c">deep time</span> away.<span class="cursor"></span></h1>
     <p class="sub">// DeepTime is a macOS app for intentional deep work. It asks what deserves your focus before you start, keeps the commitment on screen, and counts only the hours that are real.</p>
     <a class="btn solid" href="https://github.com/mghenry13/deeptime-updates/releases/download/feed/DeepTime.dmg">⤓ download for free</a>
     <div class="meta">macOS 13+ · signed &amp; notarized · auto-updates · free</div>
@@ -90,8 +139,9 @@
 
   <div class="term">
     <div class="tbar"><i></i><i></i><i></i></div>
-    <img src="../assets/shots/overlay.png" alt="DeepTime's full-screen focus picker asking: what deserves your focus?">
+    <img class="heroimg" src="../assets/hero.jpg" alt="A MacBook Pro on a dark desk showing DeepTime's full-screen focus picker">
   </div>
+  <div class="hcap">// every session starts here — <b>what deserves your focus?</b></div>
 
   <section class="flags">
     <h2>// features</h2>
@@ -143,18 +193,36 @@
   </section>
 
   <section class="bottom">
-    <div class="line">// we budget money, meals, and workouts. time is the one we can't get back.</div>
+    <div class="line">// we budget money, meals, and workouts. time is the one we can't get back.<br><a href="https://t.me/+D9kksmQFL780YzNh" target="_blank" rel="noopener" style="color:var(--cyan)">[join the beta telegram]</a></div>
     <a class="btn solid" href="https://github.com/mghenry13/deeptime-updates/releases/download/feed/DeepTime.dmg">⤓ download for free</a>
   </section>
 
   <footer>
-    <span>created by <a href="https://michaelhenry.studio/" target="_blank" rel="noopener"><b>michael henry</b></a></span>
-    <span class="links">
-      <a href="https://michaelhenry.studio/" target="_blank" rel="noopener">studio</a>
-      <a href="https://www.linkedin.com/in/michaelhenryio/" target="_blank" rel="noopener">linkedin</a>
-      <a href="https://www.instagram.com/michaelhenryio/" target="_blank" rel="noopener">instagram</a>
-    </span>
+    <div class="fq" id="fq"></div>
+    <div class="fa" id="fa"></div>
+    <div class="credit">Created by <a href="https://michaelhenry.studio/" target="_blank" rel="noopener">Michael Henry</a></div>
   </footer>
+  <script>
+    const QUOTES=[
+      ["Always remember, your focus determines your reality.","George Lucas"],
+      ["The ability to concentrate and to use time well is everything.","Lee Iacocca"],
+      ["It is not that we have a short time to live, but that we waste a lot of it.","Seneca"],
+      ["We are what we repeatedly do. Excellence, then, is not an act, but a habit.","Aristotle"],
+      ["Well begun is half done.","Aristotle"],
+      ["The future depends on what you do today.","Mahatma Gandhi"],
+      ["The secret of getting ahead is getting started.","Mark Twain"],
+      ["The man who moves a mountain begins by carrying away small stones.","Confucius"],
+      ["A journey of a thousand miles begins with a single step.","Lao Tzu"],
+      ["Discipline is choosing between what you want now and what you want most.","Abraham Lincoln"]
+    ];
+    let qi=Math.floor(Math.random()*QUOTES.length);
+    const fq=document.getElementById('fq'),fa=document.getElementById('fa');
+    function showQuote(){fq.textContent='\u201C'+QUOTES[qi][0]+'\u201D';fa.textContent='\u2014 '+QUOTES[qi][1];}
+    showQuote();
+    setInterval(()=>{fq.classList.add('fade');fa.classList.add('fade');
+      setTimeout(()=>{qi=(qi+1)%QUOTES.length;showQuote();fq.classList.remove('fade');fa.classList.remove('fade');},600);
+    },8000);
+  </script>
 </div>
 </body>
 </html>
