@@ -1,0 +1,77 @@
+{
+ "latest": "1.5.1",
+ "versions": [
+  {
+   "v": "1.5.1",
+   "d": "Jul 7, 2026",
+   "items": [
+    {
+     "t": "new",
+     "x": "A single Settings window with a sidebar (Goals · Focus · Projects · Pill · Connections · Log · Data · Updates) — replaces the old Preferences tabs and \"Settings + Log\"."
+    },
+    {
+     "t": "new",
+     "x": "\"End an idle session after\" setting (2 / 3 / 10 / 30 min, default 3)."
+    },
+    {
+     "t": "new",
+     "x": "Reassign a session's project when editing it in the Log."
+    },
+    {
+     "t": "new",
+     "x": "Join the beta on Telegram — a link in the menu-bar popover and a subtle one at the bottom of the focus picker, straight into the testers group."
+    }
+   ]
+  },
+  {
+   "v": "1.5.0",
+   "d": "Jul 7, 2026",
+   "items": [
+    {
+     "t": "new",
+     "x": "A single Settings window with a sidebar (Goals · Focus · Projects · Pill · Connections · Log · Data · Updates) — replaces both the old Preferences tabs and \"Settings + Log\"."
+    },
+    {
+     "t": "new",
+     "x": "\"End an idle session after\" setting (2 / 3 / 10 / 30 min, default 3) — how long with no keyboard/mouse before DeepTime ends the session and re-asks what you're focusing on."
+    },
+    {
+     "t": "new",
+     "x": "Reassign a session's project when editing it in the Log (alongside start/end times)."
+    },
+    {
+     "t": "rem",
+     "x": "The pill position sliders and screen picker (the pill is drag-to-move on the main display now)."
+    }
+   ]
+  },
+  {
+   "v": "1.4.19",
+   "d": "Jun 30, 2026",
+   "items": [
+    {
+     "t": "new",
+     "x": "Edit a session's start & end times in the Log — click the pencil on any completed session (or right-click → \"Edit start & end…\")."
+    },
+    {
+     "t": "fix",
+     "x": "The movable pill stays strictly on the primary display again — it can no longer be dragged onto (or stranded on) a secondary monitor."
+    }
+   ]
+  },
+  {
+   "v": "1.4.18",
+   "d": "Jun 24, 2026",
+   "items": [
+    {
+     "t": "new",
+     "x": "Move the pill anywhere — drag the floating pill to reposition it."
+    },
+    {
+     "t": "new",
+     "x": "Change a project's emoji — right-click a project in the overlay → \"Change emoji…\"."
+    }
+   ]
+  }
+ ]
+}
