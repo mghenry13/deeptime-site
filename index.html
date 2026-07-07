@@ -59,6 +59,7 @@
   .b-new{background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.35)}
   .b-imp{background:rgba(31,155,255,.14);color:#5eb8ff;border:1px solid rgba(31,155,255,.35)}
   .b-fix{background:rgba(250,204,21,.12);color:#fbbf24;border:1px solid rgba(250,204,21,.3)}
+  .b-rem{background:rgba(255,255,255,.08);color:#aeb6bf;border:1px solid rgba(255,255,255,.2)}
   .clog hr{border:0;border-top:1px solid rgba(255,255,255,.08);margin:12px 0}
 
   .kicker{font-family:'Space Mono',monospace;font-size:12px;color:var(--dim);letter-spacing:2px;text-transform:uppercase}
@@ -137,7 +138,7 @@
   <header class="hero">
     <div class="chip" id="chip">
       <button type="button" onclick="document.getElementById('chip').classList.toggle('open')">
-        <span class="dot"></span>DeepTime v1.5.1<span class="chev">▼</span>
+        <span class="dot"></span><span id="chipv">DeepTime v1.5.1</span><span class="chev">▼</span>
       </button>
       <div class="clog">
         <div class="ver"><b>v1.5.1</b><span>Jul 7, 2026</span></div>
@@ -259,5 +260,17 @@
     },8000);
   </script>
 </div>
+<script>
+  fetch('changelog.json?v='+Date.now()).then(r=>r.json()).then(d=>{
+    if(!d.latest) return;
+    document.getElementById('chipv').textContent='DeepTime v'+d.latest;
+    const B={new:['NEW','b-new'],imp:['IMPROVED','b-imp'],fix:['FIXED','b-fix'],rem:['REMOVED','b-rem']};
+    const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+    document.querySelector('#chip .clog').innerHTML=d.versions.map(v=>
+      '<div class="ver"><b>v'+v.v+'</b><span>'+v.d+'</span></div>'+
+      v.items.map(i=>'<div class="item"><span class="badge '+(B[i.t]||B.new)[1]+'">'+(B[i.t]||B.new)[0]+'</span><p>'+esc(i.x)+'</p></div>').join('')
+    ).join('<hr>');
+  }).catch(()=>{});
+</script>
 </body>
 </html>
