@@ -38,8 +38,8 @@
   .btn{background:#fff;color:#0a0c0e;font-weight:700;padding:14px 30px;border-radius:999px;font-size:15px;display:inline-block}
   .btn:hover{background:var(--cyan)}
 
-  .hero{padding:104px 0 64px;text-align:center}
-  .chip{position:relative;display:inline-block;margin-bottom:36px}
+  .hero{padding:96px 0 64px;text-align:center}
+  .chip{position:relative;display:inline-block;margin-bottom:32px}
   .chip button{display:inline-flex;align-items:center;gap:9px;background:rgba(31,155,255,.07);border:1px solid rgba(31,155,255,.45);
     border-radius:999px;padding:9px 18px;color:var(--txt);font-family:'Space Grotesk',sans-serif;font-size:13.5px;font-weight:500;cursor:pointer}
   .chip button:hover{border-color:var(--cyan)}
@@ -62,34 +62,34 @@
   .clog hr{border:0;border-top:1px solid rgba(255,255,255,.08);margin:12px 0}
 
   .kicker{font-family:'Space Mono',monospace;font-size:12px;color:var(--dim);letter-spacing:2px;text-transform:uppercase}
-  h1{font-size:clamp(64px,14vw,170px);line-height:.92;letter-spacing:-.045em;font-weight:700;margin-top:26px;
+  h1{font-size:clamp(64px,14vw,170px);line-height:.92;letter-spacing:-.045em;font-weight:700;margin-top:24px;
      background:linear-gradient(115deg,#fff 35%,var(--blue) 75%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .thesis{font-size:clamp(18px,2.8vw,26px);margin:42px auto 0;max-width:640px;line-height:1.5}
+  .thesis{font-size:clamp(18px,2.8vw,24px);margin:40px auto 0;max-width:640px;line-height:1.5}
   .thesis b{color:var(--cyan)}
   .hero .btn{margin-top:48px;font-size:16px;padding:16px 38px}
   .meta{margin-top:14px;font-size:12px;color:var(--dim)}
 
-  .marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;margin-top:24px;white-space:nowrap}
+  .marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;margin-top:24px;white-space:nowrap}
   .marquee .track{display:inline-block;animation:slide 110s linear infinite;font-family:'Space Mono',monospace;font-size:14px;color:var(--dim)}
   .marquee b{color:var(--txt);font-weight:400;margin:0 26px}
   @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-  .stage{padding:104px 0 0;text-align:center}
+  .stage{padding:0;text-align:center}
   .stage .bleed{width:100vw;margin-left:calc(50% - 50vw)}
   .stage img.main{display:block;width:100%;border:0;border-radius:0;
     box-shadow:0 60px 160px -50px rgba(0,142,255,.35)}
   @media(max-width:700px){
     .stage img.main{aspect-ratio:1/1.05;height:auto;object-fit:cover;object-position:48% 42%}
   }
-  .caption{font-size:clamp(18px,2.6vw,26px);color:var(--txt);margin-top:40px;font-weight:500;letter-spacing:-.3px}
+  .caption{font-size:clamp(18px,2.6vw,24px);color:var(--txt);margin-top:40px;font-weight:500;letter-spacing:-.3px}
   .caption b{color:var(--cyan);font-weight:700}
 
-  .tenets{padding:116px 0 48px;counter-reset:t}
+  .tenets{padding:96px 0 48px;counter-reset:t}
   .tenet{display:grid;grid-template-columns:minmax(80px,140px) 1fr minmax(200px,320px);gap:28px;align-items:center;
-    border-top:1px solid var(--line);padding:68px 0}
-  .tenet .num{font-family:'Space Mono',monospace;font-size:clamp(38px,6vw,64px);color:var(--blue)}
-  .tenet h3{font-size:clamp(22px,3.4vw,32px);letter-spacing:-.5px}
-  .tenet p{color:var(--dim);font-size:14.5px;margin-top:10px;max-width:460px;line-height:1.65}
+    border-top:1px solid var(--line);padding:64px 0}
+  .tenet .num{font-family:'Space Mono',monospace;font-size:clamp(36px,6vw,60px);color:var(--blue)}
+  .tenet h3{font-size:clamp(20px,3.2vw,30px);letter-spacing:-.5px}
+  .tenet p{color:var(--dim);font-size:14px;margin-top:12px;max-width:460px;line-height:1.65}
   .tenet .art{background:#101317;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;justify-content:center}
   .tenet .art img{width:100%;display:block}
   .tenet .art.crop{max-height:260px;align-items:flex-start;padding:16px 16px 0}
@@ -98,26 +98,26 @@
   .tenet .art.pill img{width:78%;border-radius:12px 0 0 0}
   @media(max-width:760px){.tenet{grid-template-columns:1fr}.tenet .num{font-size:34px}}
 
-  .maker{padding:96px 0 56px;text-align:center;border-top:1px solid var(--line)}
+  .maker{padding:96px 0 48px;text-align:center;border-top:1px solid var(--line)}
   .maker .mrow{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:16px}
   .maker .avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--line)}
-  .maker h2{font-size:clamp(26px,4.6vw,44px);letter-spacing:-1px}
-  .maker .mline{color:var(--dim);font-size:14.5px;margin-top:14px}
+  .maker h2{font-size:clamp(24px,4vw,36px);letter-spacing:-1px}
+  .maker .mline{color:var(--dim);font-size:14px;margin-top:16px}
   .maker .mlinks{display:flex;gap:26px;justify-content:center;margin-top:18px;font-size:12px;letter-spacing:1.5px}
   .maker .mlinks a{color:var(--cyan)}
-  .maker .flat{width:100%;border-radius:18px;border:1px solid var(--line);margin-top:52px;display:block}
+  .maker .flat{width:100%;border-radius:18px;border:1px solid var(--line);margin-top:48px;display:block}
   .btn2{display:inline-flex;align-items:center;gap:11px;background:rgba(42,171,238,.08);color:var(--txt);font-weight:700;
     padding:16px 34px;border-radius:999px;font-size:16px;border:1.5px solid rgba(42,171,238,.6)}
   .btn2 svg{color:#2AABEE}
   .btn2:hover{background:rgba(42,171,238,.16);border-color:#2AABEE}
   .tgblock{text-align:center;padding:8px 0 96px}
   .tgblock .sub2{color:var(--dim);font-size:14px;margin-top:14px}
-  .ctarow{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:38px}
-  .bottom{text-align:center;padding:116px 0 128px}
-  .bottom h2{font-size:clamp(26px,4.6vw,44px);letter-spacing:-1px}
+  .ctarow{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+  .bottom{text-align:center;padding:96px 0 112px}
+  .bottom h2{font-size:clamp(24px,4vw,36px);letter-spacing:-1px}
   .bottom .btn{font-size:16px;padding:16px 38px}
 
-  footer{border-top:1px solid var(--line);padding:44px 0 54px;text-align:center;font-size:13px;color:var(--dim)}
+  footer{border-top:1px solid var(--line);padding:48px 0 64px;text-align:center;font-size:13px;color:var(--dim)}
   footer .fq{font-size:clamp(15px,2.2vw,19px);color:var(--txt);font-weight:500;line-height:1.55;max-width:620px;margin:0 auto;
     min-height:3em;transition:opacity .6s ease}
   footer .fq.fade{opacity:0}
@@ -160,7 +160,6 @@
     <h1>DEEPTIME</h1>
     <p class="thesis">Dreams take <b>deep time</b>. Count yours.</p>
     <a class="btn" href="https://github.com/mghenry13/deeptime-updates/releases/download/feed/DeepTime.dmg">⤓ Download for Free</a>
-    <div class="meta mono">macOS 13+ · signed &amp; notarized · auto-updates</div>
   </header>
 </div>
 
