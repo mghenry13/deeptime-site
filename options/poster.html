@@ -71,12 +71,11 @@
   .tenet .num{font-family:'Space Mono',monospace;font-size:clamp(36px,6vw,60px);color:var(--blue)}
   .tenet h3{font-size:clamp(20px,3.2vw,30px);letter-spacing:-.5px}
   .tenet p{color:var(--dim);font-size:14px;margin-top:12px;max-width:460px;line-height:1.65}
-  .tenet .art{background:#101317;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;justify-content:center}
-  .tenet .art img{width:100%;display:block}
-  .tenet .art.crop{max-height:260px;align-items:flex-start;padding:16px 16px 0}
-  .tenet .art.crop img{width:82%;max-width:260px;border-radius:10px 10px 0 0}
-  .tenet .art.pill{padding:34px 0 34px 34px;justify-content:flex-end;align-items:center;background:linear-gradient(150deg,#101d24,#0d1013)}
-  .tenet .art.pill img{width:78%;border-radius:12px 0 0 0}
+  .tenet .art{background:#101317;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;
+    justify-content:center;align-items:center;height:300px;padding:16px}
+  .tenet .art img{max-width:100%;max-height:100%;width:auto;height:auto;display:block;border-radius:10px}
+  .tenet .art.pill{padding:0 0 0 40px;justify-content:flex-end;background:linear-gradient(150deg,#101d24,#0d1013)}
+  .tenet .art.pill img{width:78%;max-height:none;border-radius:12px 0 0 0}
   @media(max-width:760px){.tenet{grid-template-columns:1fr}.tenet .num{font-size:34px}}
 
   .maker{padding:96px 0 48px;text-align:center;border-top:1px solid var(--line)}
@@ -168,19 +167,19 @@
       <div class="num">01</div>
       <div><h3>Set intention</h3>
         <p>Open your Mac and DeepTime asks before anything else. Pick a project — or claim FreeTime honestly — so the scroll never picks for you.</p></div>
-      <div class="art pill"><img src="../assets/shots/pill.png" alt="Corner pill: Startup, 1:25:08 and counting"></div>
+      <div class="art"><img src="../assets/shots/picker.png" alt="The DeepTime focus picker: what deserves your focus?"></div>
     </div>
     <div class="tenet">
       <div class="num">02</div>
       <div><h3>Stay focused</h3>
         <p>Your commitment stays on screen — a project-colored pill in the corner and live goal pace in the menu bar. Not a nag. A presence.</p></div>
-      <div class="art crop"><img src="../assets/shots/popover.png" alt="Menu-bar popover: daily goal, today's breakdown, the week"></div>
+      <div class="art pill"><img src="../assets/shots/pill.png" alt="The corner chip: Startup, 1:25:08 and counting"></div>
     </div>
     <div class="tenet">
       <div class="num">03</div>
       <div><h3>Understand your time</h3>
         <p>Heat maps, streaks, and ranked all-time totals — honestly counted. Sleep and idle never inflate the numbers. Local and private, with CSV export and an MCP server for your AI tools.</p></div>
-      <div class="art crop"><img src="../assets/shots/dashboard.png" alt="Dashboard: weekly goal, heat map, 4-day streak, all-time totals"></div>
+      <div class="art"><img src="../assets/shots/dashboard.png" alt="Dashboard: weekly goal, heat map, 4-day streak, all-time totals"></div>
     </div>
   </div>
 
