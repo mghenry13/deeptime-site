@@ -36,7 +36,8 @@
   .stage{padding:72px 0 12px;text-align:center}
   .stage img.main{width:100%;max-width:900px;border-radius:18px;border:1px solid var(--line);
     box-shadow:0 40px 120px -40px rgba(0,142,255,.35)}
-  .caption{font-family:'Space Mono',monospace;font-size:12px;color:var(--dim);margin-top:16px}
+  .caption{font-size:clamp(18px,2.6vw,26px);color:var(--txt);margin-top:28px;font-weight:500;letter-spacing:-.3px}
+  .caption b{color:var(--cyan);font-weight:700}
 
   .tenets{padding:72px 0 24px;counter-reset:t}
   .tenet{display:grid;grid-template-columns:minmax(80px,140px) 1fr minmax(200px,320px);gap:28px;align-items:center;
@@ -100,7 +101,7 @@
 <div class="wrap">
   <div class="stage">
     <img class="main" src="assets/hero.jpg" alt="A MacBook Pro on a dark desk showing DeepTime's full-screen focus picker">
-    <div class="caption">every session starts here — what deserves your focus?</div>
+    <div class="caption">Every session starts here — <b>what deserves your focus?</b></div>
   </div>
 
   <div class="tenets">
