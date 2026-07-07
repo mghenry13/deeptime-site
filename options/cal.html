@@ -52,6 +52,15 @@
   .col h3{font-size:15.5px;font-weight:600}
   .col p{font-size:13.5px;color:var(--dim);margin-top:5px;line-height:1.6}
 
+  .maker{display:grid;grid-template-columns:1.4fr 1fr;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .maker .mimg img{display:block;width:100%;height:100%;object-fit:cover}
+  .maker .mtxt{padding:30px 28px;display:flex;flex-direction:column;gap:12px;justify-content:center;align-items:flex-start}
+  .maker .avatar{width:60px;height:60px;border-radius:50%;object-fit:cover}
+  .maker h3{font-size:17px;font-weight:600}
+  .maker p{font-size:13.5px;color:var(--dim);line-height:1.65}
+  .maker .mlinks{display:flex;gap:14px;font-size:13px;font-weight:500}
+  .maker .mlinks a{color:var(--accent)}
+  @media(max-width:700px){.maker{grid-template-columns:1fr}}
   .bottom{text-align:center;border-top:1px solid var(--line)}
   footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
     font-size:13px;color:var(--dim)}
@@ -103,6 +112,22 @@
       <div class="col">
         <div class="shot"><img src="../assets/shots/dashboard.png" alt="Dashboard: weekly goal, July heat map, 4-day streak, all-time totals"></div>
         <div class="cap"><h3>The month, honestly counted</h3><p>Heat map, streaks, ranked totals. Sleep and idle never inflate the numbers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="maker">
+      <div class="mimg"><img src="../assets/flatlay.jpg" alt="Michael Henry with his life laid out flat — bikes, skis, guitar, paddleboard"></div>
+      <div class="mtxt">
+        <img class="avatar" src="../assets/michael.jpg" alt="Michael Henry">
+        <h3>Made by Michael Henry</h3>
+        <p>Builder &amp; creative. DeepTime is how I budget my own hours — for the work, and for everything in that photo.</p>
+        <div class="mlinks">
+          <a href="https://michaelhenry.studio/" target="_blank" rel="noopener">Studio</a>
+          <a href="https://www.linkedin.com/in/michaelhenryio/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/michaelhenryio/" target="_blank" rel="noopener">Instagram</a>
+        </div>
       </div>
     </div>
   </section>

@@ -53,6 +53,14 @@
   .t-cta{grid-column:span 2;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:14px;padding:28px}
   .t-cta h3{font-size:19px}
 
+  .t-flat{grid-column:span 4}
+  .t-flat img{height:100%;object-fit:cover}
+  .t-maker{grid-column:span 2;padding:26px;display:flex;flex-direction:column;gap:12px;justify-content:center;align-items:flex-start}
+  .t-maker .avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--line)}
+  .t-maker p{font-size:13px;color:var(--dim);line-height:1.6}
+  .mlinks{display:flex;gap:14px;font-size:12.5px}
+  .mlinks a{color:var(--cyan)}
+  @media(max-width:820px){.t-flat,.t-maker{grid-column:span 6}}
   footer{border-top:1px solid var(--line);padding:34px 0 52px;display:flex;justify-content:space-between;
     flex-wrap:wrap;gap:14px;font-size:13px;color:var(--dim)}
   footer a{color:var(--txt)} footer a:hover{color:var(--cyan)}
@@ -113,6 +121,20 @@
     <div class="tile t-cta">
       <h3>Start counting the hours that count.</h3>
       <a class="btn" href="https://github.com/mghenry13/deeptime-updates/releases/download/feed/DeepTime.dmg">⤓ Download for Free</a>
+    </div>
+
+    <div class="tile t-flat">
+      <img src="../assets/flatlay.jpg" alt="Michael Henry with his life laid out flat — bikes, skis, guitar, paddleboard, and the gear of a full life">
+    </div>
+    <div class="tile t-maker">
+      <img class="avatar" src="../assets/michael.jpg" alt="Michael Henry">
+      <h3>Made by Michael Henry</h3>
+      <p>Builder &amp; creative. DeepTime is how I budget my own hours — for the work, and for everything in that photo.</p>
+      <div class="mlinks">
+        <a href="https://michaelhenry.studio/" target="_blank" rel="noopener">Studio</a>
+        <a href="https://www.linkedin.com/in/michaelhenryio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/michaelhenryio/" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
   </div>
 
