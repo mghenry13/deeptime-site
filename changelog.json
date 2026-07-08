@@ -1,6 +1,16 @@
 {
- "latest": "1.5.2",
+ "latest": "1.5.3",
  "versions": [
+  {
+   "v": "1.5.3",
+   "d": "Jul 8, 2026",
+   "items": [
+    {
+     "t": "fix",
+     "x": "Fixed a crash when dismissing the beta-Telegram invite with its ✕ inside a popover."
+    }
+   ]
+  },
   {
    "v": "1.5.2",
    "d": "Jul 8, 2026",
@@ -64,20 +74,6 @@
     {
      "t": "rem",
      "x": "The pill position sliders and screen picker (the pill is drag-to-move on the main display now)."
-    }
-   ]
-  },
-  {
-   "v": "1.4.19",
-   "d": "Jun 30, 2026",
-   "items": [
-    {
-     "t": "new",
-     "x": "Edit a session's start & end times in the Log — click the pencil on any completed session (or right-click → \"Edit start & end…\")."
-    },
-    {
-     "t": "fix",
-     "x": "The movable pill stays strictly on the primary display again — it can no longer be dragged onto (or stranded on) a secondary monitor."
     }
    ]
   }
