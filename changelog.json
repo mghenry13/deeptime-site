@@ -1,6 +1,28 @@
 {
- "latest": "1.5.1",
+ "latest": "1.5.2",
  "versions": [
+  {
+   "v": "1.5.2",
+   "d": "Jul 8, 2026",
+   "items": [
+    {
+     "t": "new",
+     "x": "Edit any project after creation — a pencil button in Settings → Projects opens a full editor for name, emoji, and color; \"Change color…\" also joins the right-click menu in the focus picker."
+    },
+    {
+     "t": "new",
+     "x": "Menu bar pill styles — Project color, Monochrome, or High contrast (Settings → Chip)."
+    },
+    {
+     "t": "new",
+     "x": "A \"Join the Beta on Telegram\" invite in the popovers and picker — subtle shimmer, dismissible forever with its ✕, always findable again in Settings."
+    },
+    {
+     "t": "imp",
+     "x": "The floating pill is now called the Chip, with its own explained section in Settings."
+    }
+   ]
+  },
   {
    "v": "1.5.1",
    "d": "Jul 7, 2026",
@@ -56,20 +78,6 @@
     {
      "t": "fix",
      "x": "The movable pill stays strictly on the primary display again — it can no longer be dragged onto (or stranded on) a secondary monitor."
-    }
-   ]
-  },
-  {
-   "v": "1.4.18",
-   "d": "Jun 24, 2026",
-   "items": [
-    {
-     "t": "new",
-     "x": "Move the pill anywhere — drag the floating pill to reposition it."
-    },
-    {
-     "t": "new",
-     "x": "Change a project's emoji — right-click a project in the overlay → \"Change emoji…\"."
     }
    ]
   }
