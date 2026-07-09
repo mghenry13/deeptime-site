@@ -1,6 +1,48 @@
 {
- "latest": "1.5.3",
+ "latest": "1.5.4",
  "versions": [
+  {
+   "v": "1.5.4",
+   "d": "Jul 9, 2026",
+   "items": [
+    {
+     "t": "new",
+     "x": "Quick-switch buttons in the menu-bar popover — up to five color-coded emoji buttons under Stop/Switch jump straight to your most-worked projects."
+    },
+    {
+     "t": "new",
+     "x": "\"＋ New project…\" in the chip popover (⌘N) and the menu bar's Switch menu — create a project without hunting through Settings."
+    },
+    {
+     "t": "new",
+     "x": "Show chip toggle — hide the floating timer entirely; sessions keep running and the menu bar still shows progress."
+    },
+    {
+     "t": "new",
+     "x": "New Settings sections with live previews — Menu Bar, Chip, App Icon, and Screen Glow each get their own sidebar page with a rendering of what they control."
+    },
+    {
+     "t": "new",
+     "x": "Hide Dock icon — run DeepTime as a menu-bar-only app (Settings → App Icon)."
+    },
+    {
+     "t": "new",
+     "x": "Screen glow toggle — turn the under-menu-bar session glow on or off."
+    },
+    {
+     "t": "fix",
+     "x": "Picking an emoji while creating a project works again — the focus screen no longer eats the picker's clicks."
+    },
+    {
+     "t": "fix",
+     "x": "Editing a project's emoji and color together now saves both — previously only the last change stuck."
+    },
+    {
+     "t": "imp",
+     "x": "The beta-Telegram invite's ✕ now hides it everywhere, including Settings."
+    }
+   ]
+  },
   {
    "v": "1.5.3",
    "d": "Jul 8, 2026",
@@ -52,28 +94,6 @@
     {
      "t": "new",
      "x": "Join the beta on Telegram — a link in the menu-bar popover and a subtle one at the bottom of the focus picker, straight into the testers group."
-    }
-   ]
-  },
-  {
-   "v": "1.5.0",
-   "d": "Jul 7, 2026",
-   "items": [
-    {
-     "t": "new",
-     "x": "A single Settings window with a sidebar (Goals · Focus · Projects · Pill · Connections · Log · Data · Updates) — replaces both the old Preferences tabs and \"Settings + Log\"."
-    },
-    {
-     "t": "new",
-     "x": "\"End an idle session after\" setting (2 / 3 / 10 / 30 min, default 3) — how long with no keyboard/mouse before DeepTime ends the session and re-asks what you're focusing on."
-    },
-    {
-     "t": "new",
-     "x": "Reassign a session's project when editing it in the Log (alongside start/end times)."
-    },
-    {
-     "t": "rem",
-     "x": "The pill position sliders and screen picker (the pill is drag-to-move on the main display now)."
     }
    ]
   }
