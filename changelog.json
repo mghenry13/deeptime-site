@@ -1,6 +1,28 @@
 {
- "latest": "1.5.4",
+ "latest": "1.5.5",
  "versions": [
+  {
+   "v": "1.5.5",
+   "d": "Jul 13, 2026",
+   "items": [
+    {
+     "t": "new",
+     "x": "Drag-and-drop project reordering in Settings → Projects — grab a row and drag; the order is used in the picker, popovers, and menus."
+    },
+    {
+     "t": "new",
+     "x": "Settings from anywhere — a subtle ⚙ Settings button on the focus screen and a Settings row in the chip's popover."
+    },
+    {
+     "t": "imp",
+     "x": "\"Reorder projects\" and its up/down modal were removed from the focus screen — reordering lives in Settings now."
+    },
+    {
+     "t": "fix",
+     "x": "The Settings buttons outside the menu bar actually open the Settings window now."
+    }
+   ]
+  },
   {
    "v": "1.5.4",
    "d": "Jul 9, 2026",
@@ -72,28 +94,6 @@
     {
      "t": "imp",
      "x": "The floating pill is now called the Chip, with its own explained section in Settings."
-    }
-   ]
-  },
-  {
-   "v": "1.5.1",
-   "d": "Jul 7, 2026",
-   "items": [
-    {
-     "t": "new",
-     "x": "A single Settings window with a sidebar (Goals · Focus · Projects · Pill · Connections · Log · Data · Updates) — replaces the old Preferences tabs and \"Settings + Log\"."
-    },
-    {
-     "t": "new",
-     "x": "\"End an idle session after\" setting (2 / 3 / 10 / 30 min, default 3)."
-    },
-    {
-     "t": "new",
-     "x": "Reassign a session's project when editing it in the Log."
-    },
-    {
-     "t": "new",
-     "x": "Join the beta on Telegram — a link in the menu-bar popover and a subtle one at the bottom of the focus picker, straight into the testers group."
     }
    ]
   }
