@@ -1,6 +1,52 @@
 {
- "latest": "1.5.6",
+ "latest": "1.5.7",
  "versions": [
+  {
+   "v": "1.5.7",
+   "d": "Jul 14, 2026",
+   "items": [
+    {
+     "t": "new",
+     "x": "Focus Readout on the focus screen — the quote's old spot now shows your day and week: a Today ledger («Project» durations — total), an AI-written week line (on-device Apple Intelligence, fact-checked against your real numbers, template fallback), and the month as a two-row heat strip with hover breakdowns per day."
+    },
+    {
+     "t": "new",
+     "x": "Quotes moved to the big screen — on multi-display setups, secondary displays show the rotating quote poster-huge while the focus screen is up."
+    },
+    {
+     "t": "new",
+     "x": "Color schemes — Settings → Colors offers four 12-color palettes (Boost · Jewel · Soft · Aviation) with compact previews; switching restyles every project to the matching hue slot."
+    },
+    {
+     "t": "new",
+     "x": "Add a forgotten session — Settings → Log → \"＋ Add session…\" logs a past block (deep or FreeTime) with project, start, and end."
+    },
+    {
+     "t": "new",
+     "x": "Quit confirmation — ⌘Q asks \"Quit DeepTime?\" (Return quits, Esc cancels, or \"don't ask again\"; re-enable in Settings → App Icon)."
+    },
+    {
+     "t": "new",
+     "x": "Goals with live previews — Settings → Goals renders the menu-bar pill and the popover's pace line, ringing exactly what each setting controls."
+    },
+    {
+     "t": "new",
+     "x": "Pressing Escape on the focus screen now answers with a toast — \"Nope."
+    },
+    {
+     "t": "imp",
+     "x": "The focus screen's countdown pills now appear only when hovering a project row."
+    },
+    {
+     "t": "imp",
+     "x": "The Settings window resizes freely again and gained min sizing."
+    },
+    {
+     "t": "fix",
+     "x": "Project colors in swatch pickers now follow the active color scheme everywhere."
+    }
+   ]
+  },
   {
    "v": "1.5.6",
    "d": "Jul 13, 2026",
@@ -84,16 +130,6 @@
     {
      "t": "imp",
      "x": "The beta-Telegram invite's ✕ now hides it everywhere, including Settings."
-    }
-   ]
-  },
-  {
-   "v": "1.5.3",
-   "d": "Jul 8, 2026",
-   "items": [
-    {
-     "t": "fix",
-     "x": "Fixed a crash when dismissing the beta-Telegram invite with its ✕ inside a popover."
     }
    ]
   }
