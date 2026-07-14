@@ -1,6 +1,28 @@
 {
- "latest": "1.5.5",
+ "latest": "1.5.6",
  "versions": [
+  {
+   "v": "1.5.6",
+   "d": "Jul 13, 2026",
+   "items": [
+    {
+     "t": "new",
+     "x": "Pick the menu bar pill style visually — Settings → Menu Bar now shows all three styles as live mockups; click one to use it."
+    },
+    {
+     "t": "new",
+     "x": "The chip popover's Settings row shows and responds to ⌘,."
+    },
+    {
+     "t": "fix",
+     "x": "The chip opens on the first click — clicking it while another app was frontmost used to need a second click."
+    },
+    {
+     "t": "fix",
+     "x": "The last project row in Settings → Projects is no longer cut off."
+    }
+   ]
+  },
   {
    "v": "1.5.5",
    "d": "Jul 13, 2026",
@@ -72,28 +94,6 @@
     {
      "t": "fix",
      "x": "Fixed a crash when dismissing the beta-Telegram invite with its ✕ inside a popover."
-    }
-   ]
-  },
-  {
-   "v": "1.5.2",
-   "d": "Jul 8, 2026",
-   "items": [
-    {
-     "t": "new",
-     "x": "Edit any project after creation — a pencil button in Settings → Projects opens a full editor for name, emoji, and color; \"Change color…\" also joins the right-click menu in the focus picker."
-    },
-    {
-     "t": "new",
-     "x": "Menu bar pill styles — Project color, Monochrome, or High contrast (Settings → Chip)."
-    },
-    {
-     "t": "new",
-     "x": "A \"Join the Beta on Telegram\" invite in the popovers and picker — subtle shimmer, dismissible forever with its ✕, always findable again in Settings."
-    },
-    {
-     "t": "imp",
-     "x": "The floating pill is now called the Chip, with its own explained section in Settings."
     }
    ]
   }
