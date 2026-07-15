@@ -1,6 +1,28 @@
 {
- "latest": "1.5.7",
+ "latest": "1.5.8",
  "versions": [
+  {
+   "v": "1.5.8",
+   "d": "Jul 15, 2026",
+   "items": [
+    {
+     "t": "new",
+     "x": "Double-click a Log row to edit the session."
+    },
+    {
+     "t": "imp",
+     "x": "The AI week line now regenerates hourly in the background (and at session boundaries), so the focus screen opens with it ready instead of visibly reloading it."
+    },
+    {
+     "t": "imp",
+     "x": "The July strip's today square stays uncolored until the goal is met, matching the popover heat maps."
+    },
+    {
+     "t": "fix",
+     "x": "Sessions no longer end during long meetings — while Google Meet, Zoom, or any app keeps the display awake, the idle timer defers for the whole call (the old 10-minute backstop cut hour-long meetings short)."
+    }
+   ]
+  },
   {
    "v": "1.5.7",
    "d": "Jul 14, 2026",
@@ -88,48 +110,6 @@
     {
      "t": "fix",
      "x": "The Settings buttons outside the menu bar actually open the Settings window now."
-    }
-   ]
-  },
-  {
-   "v": "1.5.4",
-   "d": "Jul 9, 2026",
-   "items": [
-    {
-     "t": "new",
-     "x": "Quick-switch buttons in the menu-bar popover — up to five color-coded emoji buttons under Stop/Switch jump straight to your most-worked projects."
-    },
-    {
-     "t": "new",
-     "x": "\"＋ New project…\" in the chip popover (⌘N) and the menu bar's Switch menu — create a project without hunting through Settings."
-    },
-    {
-     "t": "new",
-     "x": "Show chip toggle — hide the floating timer entirely; sessions keep running and the menu bar still shows progress."
-    },
-    {
-     "t": "new",
-     "x": "New Settings sections with live previews — Menu Bar, Chip, App Icon, and Screen Glow each get their own sidebar page with a rendering of what they control."
-    },
-    {
-     "t": "new",
-     "x": "Hide Dock icon — run DeepTime as a menu-bar-only app (Settings → App Icon)."
-    },
-    {
-     "t": "new",
-     "x": "Screen glow toggle — turn the under-menu-bar session glow on or off."
-    },
-    {
-     "t": "fix",
-     "x": "Picking an emoji while creating a project works again — the focus screen no longer eats the picker's clicks."
-    },
-    {
-     "t": "fix",
-     "x": "Editing a project's emoji and color together now saves both — previously only the last change stuck."
-    },
-    {
-     "t": "imp",
-     "x": "The beta-Telegram invite's ✕ now hides it everywhere, including Settings."
     }
    ]
   }
