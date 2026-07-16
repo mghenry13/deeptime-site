@@ -1,6 +1,16 @@
 {
- "latest": "1.5.8",
+ "latest": "1.5.9",
  "versions": [
+  {
+   "v": "1.5.9",
+   "d": "Jul 16, 2026",
+   "items": [
+    {
+     "t": "fix",
+     "x": "Auto-updates no longer stall behind the quit dialog — when Sparkle relaunches to install an update, the \"Quit DeepTime?\" confirmation steps aside."
+    }
+   ]
+  },
   {
    "v": "1.5.8",
    "d": "Jul 15, 2026",
@@ -88,28 +98,6 @@
     {
      "t": "fix",
      "x": "The last project row in Settings → Projects is no longer cut off."
-    }
-   ]
-  },
-  {
-   "v": "1.5.5",
-   "d": "Jul 13, 2026",
-   "items": [
-    {
-     "t": "new",
-     "x": "Drag-and-drop project reordering in Settings → Projects — grab a row and drag; the order is used in the picker, popovers, and menus."
-    },
-    {
-     "t": "new",
-     "x": "Settings from anywhere — a subtle ⚙ Settings button on the focus screen and a Settings row in the chip's popover."
-    },
-    {
-     "t": "imp",
-     "x": "\"Reorder projects\" and its up/down modal were removed from the focus screen — reordering lives in Settings now."
-    },
-    {
-     "t": "fix",
-     "x": "The Settings buttons outside the menu bar actually open the Settings window now."
     }
    ]
   }
